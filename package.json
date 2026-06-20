@@ -5,5 +5,10 @@
   "repository": "https://github.com/MaienM/oxlint-config",
   "author": "Michon van Dooren <me@maienm.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "type": "module",
+  "exports": "./oxlint.config.ts",
+  "devDependencies": {
+    "oxlint": "^1.70.0"
+  }
 }
