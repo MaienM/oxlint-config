@@ -8,14 +8,12 @@ export default defineConfig({
 		tsStrict,
 	],
 	plugins: [
+		'oxc',
 		'typescript',
 		'unicorn',
-		'oxc',
 	],
 	categories: {
 		correctness: 'error',
-	},
-	rules: {
 	},
 	env: {
 		builtin: true,
