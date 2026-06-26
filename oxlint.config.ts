@@ -71,6 +71,26 @@ export default defineConfig({
 		'unicorn/text-encoding-identifier-case': ['warn', {
 			withDash: true,
 		}],
+
+		// Consistent import & export ordering, grouped from the most remote sources to the most local ones.
+		'sort-imports': 'off',
+		'import-sort/imports': ['error', {
+			groups: [[
+			  // Side effect imports.
+			  String.raw`^\u0000`,
+			  // Node.js builtins prefixed with `node:`.
+			  '^node:',
+			  // Modules.
+			  String.raw`^@?\w`,
+			  // Local aliases, with the named modules (which are kinda like local packages) before the root alias.
+			  String.raw`^#\w`,
+			  '^#/',
+			  // Relative imports, with parents before siblings/children.
+			  String.raw`^\.\./`,
+			  String.raw`^\./`,
+			]],
+		}],
+		'import-sort/exports': 'error',
 	},
 	overrides: [
 		{
