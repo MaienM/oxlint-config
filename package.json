@@ -1,6 +1,6 @@
 {
   "name": "@maienm/oxlint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "My personal linting configs.",
   "repository": "https://github.com/MaienM/oxlint-config",
   "author": "Michon van Dooren <me@maienm.com>",
