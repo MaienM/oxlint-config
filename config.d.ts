@@ -1,3 +1,4 @@
 import type { OxlintConfig } from 'oxlint';
 
-export = OxlintConfig;
+declare const config: OxlintConfig;
+export default config;
